@@ -1,0 +1,8 @@
+language: java
+jdk:
+  - openjdk8
+git:
+  submodules: false
+
+install: mvn install -DskipTests=true -Dgpg.skip=true -q
+script: mvn verify -Dgpg.skip=true -B -q
